@@ -1,3 +1,24 @@
 syntax = "proto3";
 
-service 
+option go_package = "Handin5/proto";
+
+service Auction {
+  rpc Bid(BidRequest) returns (BidResponse);
+  rpc Result(ResultRequest) returns (ResultResponse);
+}
+
+message BidRequest {
+  string bidder = 1;
+  int32 amount = 2;
+}
+
+message BidResponse {
+  string outcome = 1; // "success", "fail", or "exception"
+}
+
+message ResultRequest {}
+
+message ResultResponse {
+  string outcome = 1; // "Auction ongoing" or winner's name
+  int32 highestBid = 2;
+}
