@@ -7,18 +7,48 @@ service Auction {
   rpc Result(ResultRequest) returns (ResultResponse);
 }
 
+service backupNode {
+  rpc BidBackup (BidRequest) returns (BidResponse);
+  rpc ResultBackup (ResultRequest) returns (ResultResponse);
+  rpc Ping (PingMessage) returns (PingMessage);
+  rpc isPrimary (Empty) returns (ServerResponse);
+}
+
+message ServerResponse {
+  bool isPrimary = 1;
+}
+
+message PingMessage {
+  int32 id = 1;
+}
+
+message Empty {}
+
 message BidRequest {
-  string bidder = 1;
-  int32 amount = 2;
+  int32 Lamport = 1;
+  int32 bidderId = 2;
+  int32 amount = 3;
 }
 
 message BidResponse {
-  string outcome = 1; // "success", "fail", or "exception"
+    enum RESULT {
+      SUCCESS = 0;
+      FAIL = 1;
+      EXCEPTION = 2;
+    }
+  int32 Lamport = 1;
+  RESULT result= 2;
 }
 
 message ResultRequest {}
 
 message ResultResponse {
-  string outcome = 1; // "Auction ongoing" or winner's name
+  enum STATE {
+    ONGOING = 0;
+    FINISHED = 1;
+    NOTSTARTED = 2;
+  }
+  STATE outcome = 1; // "Auction ongoing" or winner's name
   int32 highestBid = 2;
+  int32 highestBidder = 3;
 }
