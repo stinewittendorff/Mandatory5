@@ -27,6 +27,7 @@ type Bidder struct {
 // Method to increment our lamport timestamp
 func (b *Bidder) incrementLamport(serverTimestamp int32) {
 	var mu sync.Mutex
+	mu.Lock()
 	defer mu.Unlock()
 	if b.Lamport < serverTimestamp {
 		b.Lamport = serverTimestamp + 1
@@ -87,7 +88,7 @@ func main() {
 		splitted := strings.Fields(input)
 		//If the users input start starts with "bid" with an int after it, it will send the bid given to the server.
 		if splitted[0] == "bid" {
-			b.incrementLamport(-10)
+			b.incrementLamport(-1)
 			amount, err := strconv.Atoi(splitted[1])
 			// If the amount is not an int, it will log an error
 			if err != nil {

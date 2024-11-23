@@ -57,6 +57,7 @@ func (p *peer) elect() {
 
 func (p *peer) incrementLamport(serverTimestamp int32) {
 	var mu sync.Mutex
+	mu.Lock()
 	defer mu.Unlock()
 	if p.Lamport < serverTimestamp {
 		p.Lamport = serverTimestamp + 1
@@ -105,70 +106,54 @@ func (p *peer) ResultBackup(ctx context.Context, in *proto.ResultRequest) (*prot
 }
 
 func (p *peer) BidBackup(ctx context.Context, in *proto.BidRequest) (*proto.BidResponse, error) {
-	if p.PrimaryServer {
-		var wg sync.WaitGroup
-		for id, client := range p.clients {
-			wg.Add(1)
-			go func(clientId int32, requestClient proto.BackupNodeClient) {
-				defer wg.Done()
-				log.Printf("sending request to %d", clientId)
-				_, err := requestClient.BidBackup(ctx, in)
-				if err != nil {
-					fmt.Printf("Backup server %d is not responding", clientId)
-				}
-			}(id, client)
-		}
-		wg.Wait()
-		log.Printf("Ack received from all backups. \n")
-	}
 	p.incrementLamport(in.Lamport)
+
 	log.Printf("Server has received a bid from client %d with amount %d at lamport time %d\n", in.BidderId, in.Amount, p.Lamport)
 
+	var response *proto.BidResponse
+
+	p.wg.Add(1)
+	defer p.wg.Done()
+
 	if in.Amount <= 0 {
-		log.Printf("Server has recieved an invalid bid from client %d with amount %d at lamport time %d\n", in.BidderId, in.Amount, p.Lamport)
-		return &proto.BidResponse{
+		response = &proto.BidResponse{
 			Lamport: p.Lamport,
 			Result:  proto.BidResponse_EXCEPTION,
-		}, nil
-	}
-
-	if p.auction.state == proto.ResultResponse_NOTSTARTED || p.auction.state == proto.ResultResponse_FINISHED {
-		log.Printf("Startt nw auction with starting bid %d and bidderId %d\n", in.Amount, in.BidderId)
+		}
+	} else if p.auction.state == proto.ResultResponse_NOTSTARTED || p.auction.state == proto.ResultResponse_FINISHED {
 		p.auction.state = proto.ResultResponse_ONGOING
 		p.auction.winner = in.BidderId
 		p.auction.winningBid = in.Amount
 		go p.StartAuction()
-		return &proto.BidResponse{
+		response = &proto.BidResponse{
 			Lamport: p.Lamport,
 			Result:  proto.BidResponse_SUCCESS,
-		}, nil
+		}
+	} else if in.Amount > p.auction.winningBid {
+		log.Printf("New bid %d from client %d is the highest bid.\n", in.Amount, in.BidderId)
+		p.auction.winner = in.BidderId
+		p.auction.winningBid = in.Amount
+		response = &proto.BidResponse{
+			Lamport: p.Lamport,
+			Result:  proto.BidResponse_SUCCESS,
+		}
 	} else {
-		if p.auction.winningBid < in.Amount {
-			log.Printf("New bid %d from client %d is the highest bid.\n", in.Amount, in.BidderId)
-			log.Printf("Extending auction\n")
-			go p.ExtendAuction()
-			p.auction.winner = in.BidderId
-			p.auction.winningBid = in.Amount
-			return &proto.BidResponse{
-				Lamport: p.Lamport,
-				Result:  proto.BidResponse_SUCCESS,
-			}, nil
-		} else {
-			log.Printf("you have to mke a higher bid than %d\n", p.auction.winningBid)
-			return &proto.BidResponse{
-				Lamport: p.Lamport,
-				Result:  proto.BidResponse_FAIL,
-			}, nil
+		log.Printf("Bid %d from client %d is lower than the current highest bid %d\n", in.Amount, in.BidderId, p.auction.winningBid)
+		response = &proto.BidResponse{
+			Lamport: p.Lamport,
+			Result:  proto.BidResponse_FAIL,
 		}
 	}
+
+	return response, nil
 }
 
 func (p *peer) StartAuction() {
-	log.Printf("Auction has started! Let the bidding begin!\n")
+	log.Printf("An auction has started\n")
 	time.Sleep(1000 * time.Microsecond)
 	p.wg.Wait()
 	p.auction.state = proto.ResultResponse_FINISHED
-	log.Printf("Auction is Finished!\n")
+	log.Printf("Auction has concluded!\n")
 }
 
 func (p *peer) ExtendAuction() {
@@ -252,7 +237,7 @@ func main() {
 				p.elect()
 			} else {
 				log.Printf("Successfully pinged primary server. \n")
-				time.Sleep(3000 * time.Microsecond)
+				time.Sleep(3000 * time.Millisecond)
 			}
 		}
 	}()

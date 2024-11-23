@@ -4,11 +4,11 @@ import (
 	proto "Auction/proto"
 	"context"
 	"fmt"
+	"io"
 	"log"
 	"net"
 	"os"
 	"strconv"
-	"io"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
