@@ -140,9 +140,13 @@ func (p *peer) BidBackup(ctx context.Context, in *proto.BidRequest) (*proto.BidR
 	}
 	
 	if in.Amount > p.auction.winningBid {
-		log.Printf("New bid %d from client %d is the highest bid.\n", in.Amount, in.BidderId)
-		p.auction.winner = in.BidderId
-		p.auction.winningBid = in.Amount
+		if in.Amount > p.auction.winningBid {
+			log.Printf("New bid %d from client %d is the highest bid.\n", in.Amount, in.BidderId)
+			p.auction.winner = in.BidderId
+			p.auction.winningBid = in.Amount
+		} else {
+			log.Printf("Bid from %d from client %d is lower than the current winning bid %d\n", in.Amount, in.BidderId, p.auction.winningBid)
+		}
 
 		return &proto.BidResponse{
 			Lamport: p.Lamport,
