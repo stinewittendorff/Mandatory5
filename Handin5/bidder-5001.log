@@ -1,5 +1,11 @@
-2024/11/25 14:19:16 Connected to server %d5000
-2024/11/25 14:19:42 Bidder 5001 bids 2, at timestamp 1
-2024/11/25 14:19:42 Bidder 5001 received SUCCESS at timestamp 3
-2024/11/25 14:19:46 Bidder 5001 bids 4, at timestamp 4
-2024/11/25 14:19:46 Bidder 5001 received SUCCESS at timestamp 6
+2024/11/25 14:29:49 Connected to server %d5000
+2024/11/25 14:29:55 Bidder 5001 bids 100, at timestamp 1
+2024/11/25 14:29:55 Bidder 5001 received SUCCESS at timestamp 3
+2024/11/25 14:30:10 The auction is currently ONGOING and the highest bid is 101 by bidder 5002
+2024/11/25 14:30:12 Bidder 5001 bids 2, at timestamp 4
+2024/11/25 14:30:12 Bidder 5001 received FAIL at timestamp 6
+2024/11/25 14:30:15 The auction is currently ONGOING and the highest bid is 101 by bidder 5002
+2024/11/25 14:30:22 Bidder 5001 bids 2000, at timestamp 7
+2024/11/25 14:30:22 Bidder 5001 received SUCCESS at timestamp 9
+2024/11/25 14:30:42 The auction is currently ONGOING and the highest bid is 2000 by bidder 5001
+2024/11/25 14:31:00 The auction is currently FINISHED and the highest bid is 2000 by bidder 5001

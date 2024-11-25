@@ -1,219 +1,96 @@
-2024/11/25 14:18:10 Connected to server 6000
-2024/11/25 14:18:11 Connected to server 6002
-2024/11/25 14:18:11 Trying to become primary server
-2024/11/25 14:18:11 Successfully pinged primary server. 
-2024/11/25 14:18:14 Trying to become primary server
-2024/11/25 14:18:14 Successfully pinged primary server. 
-2024/11/25 14:18:17 Trying to become primary server
-2024/11/25 14:18:17 Successfully pinged primary server. 
-2024/11/25 14:18:20 Trying to become primary server
-2024/11/25 14:18:20 Successfully pinged primary server. 
-2024/11/25 14:18:23 Trying to become primary server
-2024/11/25 14:18:23 Successfully pinged primary server. 
-2024/11/25 14:18:26 Trying to become primary server
-2024/11/25 14:18:26 Successfully pinged primary server. 
-2024/11/25 14:18:29 Trying to become primary server
-2024/11/25 14:18:29 Successfully pinged primary server. 
-2024/11/25 14:18:32 Trying to become primary server
-2024/11/25 14:18:32 Successfully pinged primary server. 
-2024/11/25 14:18:35 Trying to become primary server
-2024/11/25 14:18:35 Successfully pinged primary server. 
-2024/11/25 14:18:38 Trying to become primary server
-2024/11/25 14:18:38 Successfully pinged primary server. 
-2024/11/25 14:18:41 Trying to become primary server
-2024/11/25 14:18:41 Successfully pinged primary server. 
-2024/11/25 14:18:44 Trying to become primary server
-2024/11/25 14:18:44 Successfully pinged primary server. 
-2024/11/25 14:18:47 Trying to become primary server
-2024/11/25 14:18:47 Successfully pinged primary server. 
-2024/11/25 14:18:50 Trying to become primary server
-2024/11/25 14:18:50 Successfully pinged primary server. 
-2024/11/25 14:18:53 Trying to become primary server
-2024/11/25 14:18:53 Successfully pinged primary server. 
-2024/11/25 14:18:56 Trying to become primary server
-2024/11/25 14:18:56 Successfully pinged primary server. 
-2024/11/25 14:18:59 Trying to become primary server
-2024/11/25 14:18:59 Successfully pinged primary server. 
-2024/11/25 14:19:02 Trying to become primary server
-2024/11/25 14:19:02 Successfully pinged primary server. 
-2024/11/25 14:19:05 Trying to become primary server
-2024/11/25 14:19:05 Successfully pinged primary server. 
-2024/11/25 14:19:08 Trying to become primary server
-2024/11/25 14:19:08 Successfully pinged primary server. 
-2024/11/25 14:19:11 Trying to become primary server
-2024/11/25 14:19:11 Successfully pinged primary server. 
-2024/11/25 14:19:14 Trying to become primary server
-2024/11/25 14:19:14 Successfully pinged primary server. 
-2024/11/25 14:19:17 Trying to become primary server
-2024/11/25 14:19:17 Successfully pinged primary server. 
-2024/11/25 14:19:20 Trying to become primary server
-2024/11/25 14:19:20 Successfully pinged primary server. 
-2024/11/25 14:19:23 Trying to become primary server
-2024/11/25 14:19:23 Successfully pinged primary server. 
-2024/11/25 14:19:26 Trying to become primary server
-2024/11/25 14:19:26 Successfully pinged primary server. 
-2024/11/25 14:19:29 Trying to become primary server
-2024/11/25 14:19:29 Successfully pinged primary server. 
-2024/11/25 14:19:32 Trying to become primary server
-2024/11/25 14:19:32 Successfully pinged primary server. 
-2024/11/25 14:19:35 Trying to become primary server
-2024/11/25 14:19:35 Successfully pinged primary server. 
-2024/11/25 14:19:38 Trying to become primary server
-2024/11/25 14:19:38 Successfully pinged primary server. 
-2024/11/25 14:19:41 Trying to become primary server
-2024/11/25 14:19:41 Successfully pinged primary server. 
-2024/11/25 14:19:44 Trying to become primary server
-2024/11/25 14:19:44 Successfully pinged primary server. 
-2024/11/25 14:19:47 Trying to become primary server
-2024/11/25 14:19:47 Successfully pinged primary server. 
-2024/11/25 14:19:50 Trying to become primary server
-2024/11/25 14:19:50 Successfully pinged primary server. 
-2024/11/25 14:19:53 Trying to become primary server
-2024/11/25 14:19:53 Successfully pinged primary server. 
-2024/11/25 14:19:56 Trying to become primary server
-2024/11/25 14:19:56 Successfully pinged primary server. 
-2024/11/25 14:19:59 Trying to become primary server
-2024/11/25 14:19:59 Successfully pinged primary server. 
-2024/11/25 14:20:02 Trying to become primary server
-2024/11/25 14:20:02 Successfully pinged primary server. 
-2024/11/25 14:20:05 Trying to become primary server
-2024/11/25 14:20:05 Successfully pinged primary server. 
-2024/11/25 14:20:08 Trying to become primary server
-2024/11/25 14:20:08 Successfully pinged primary server. 
-2024/11/25 14:20:11 Trying to become primary server
-2024/11/25 14:20:11 Successfully pinged primary server. 
-2024/11/25 14:20:14 Trying to become primary server
-2024/11/25 14:20:14 Successfully pinged primary server. 
-2024/11/25 14:20:17 Trying to become primary server
-2024/11/25 14:20:17 Successfully pinged primary server. 
-2024/11/25 14:20:20 Trying to become primary server
-2024/11/25 14:20:20 Successfully pinged primary server. 
-2024/11/25 14:20:23 Trying to become primary server
-2024/11/25 14:20:23 Successfully pinged primary server. 
-2024/11/25 14:20:26 Trying to become primary server
-2024/11/25 14:20:26 Successfully pinged primary server. 
-2024/11/25 14:20:29 Trying to become primary server
-2024/11/25 14:20:29 Successfully pinged primary server. 
-2024/11/25 14:20:32 Trying to become primary server
-2024/11/25 14:20:32 Successfully pinged primary server. 
-2024/11/25 14:20:35 Trying to become primary server
-2024/11/25 14:20:35 Successfully pinged primary server. 
-2024/11/25 14:20:38 Trying to become primary server
-2024/11/25 14:20:38 Successfully pinged primary server. 
-2024/11/25 14:20:41 Trying to become primary server
-2024/11/25 14:20:41 Successfully pinged primary server. 
-2024/11/25 14:20:44 Trying to become primary server
-2024/11/25 14:20:44 Successfully pinged primary server. 
-2024/11/25 14:20:47 Trying to become primary server
-2024/11/25 14:20:47 Successfully pinged primary server. 
-2024/11/25 14:20:50 Trying to become primary server
-2024/11/25 14:20:50 Successfully pinged primary server. 
-2024/11/25 14:20:53 Trying to become primary server
-2024/11/25 14:20:53 Successfully pinged primary server. 
-2024/11/25 14:20:56 Trying to become primary server
-2024/11/25 14:20:56 Successfully pinged primary server. 
-2024/11/25 14:20:59 Trying to become primary server
-2024/11/25 14:20:59 Successfully pinged primary server. 
-2024/11/25 14:21:02 Trying to become primary server
-2024/11/25 14:21:02 Successfully pinged primary server. 
-2024/11/25 14:21:05 Trying to become primary server
-2024/11/25 14:21:05 Successfully pinged primary server. 
-2024/11/25 14:21:08 Trying to become primary server
-2024/11/25 14:21:08 Successfully pinged primary server. 
-2024/11/25 14:21:11 Trying to become primary server
-2024/11/25 14:21:11 Successfully pinged primary server. 
-2024/11/25 14:21:14 Trying to become primary server
-2024/11/25 14:21:14 Successfully pinged primary server. 
-2024/11/25 14:21:17 Trying to become primary server
-2024/11/25 14:21:17 Successfully pinged primary server. 
-2024/11/25 14:21:20 Trying to become primary server
-2024/11/25 14:21:20 Successfully pinged primary server. 
-2024/11/25 14:21:23 Trying to become primary server
-2024/11/25 14:21:23 Successfully pinged primary server. 
-2024/11/25 14:21:26 Trying to become primary server
-2024/11/25 14:21:26 Successfully pinged primary server. 
-2024/11/25 14:21:29 Trying to become primary server
-2024/11/25 14:21:29 Successfully pinged primary server. 
-2024/11/25 14:21:32 Trying to become primary server
-2024/11/25 14:21:32 Successfully pinged primary server. 
-2024/11/25 14:21:35 Trying to become primary server
-2024/11/25 14:21:35 Successfully pinged primary server. 
-2024/11/25 14:21:38 Trying to become primary server
-2024/11/25 14:21:38 Successfully pinged primary server. 
-2024/11/25 14:21:41 Trying to become primary server
-2024/11/25 14:21:41 Successfully pinged primary server. 
-2024/11/25 14:21:44 Trying to become primary server
-2024/11/25 14:21:44 Successfully pinged primary server. 
-2024/11/25 14:21:47 Trying to become primary server
-2024/11/25 14:21:47 Successfully pinged primary server. 
-2024/11/25 14:21:50 Trying to become primary server
-2024/11/25 14:21:50 Successfully pinged primary server. 
-2024/11/25 14:21:53 Trying to become primary server
-2024/11/25 14:21:53 Successfully pinged primary server. 
-2024/11/25 14:21:53 Server recieved result request.
+2024/11/25 14:29:36 Connected to server 6000
+2024/11/25 14:29:36 Connected to server 6002
+2024/11/25 14:29:36 Trying to become primary server
+2024/11/25 14:29:36 Successfully pinged primary server. 
+2024/11/25 14:29:39 Trying to become primary server
+2024/11/25 14:29:39 Successfully pinged primary server. 
+2024/11/25 14:29:42 Trying to become primary server
+2024/11/25 14:29:42 Successfully pinged primary server. 
+2024/11/25 14:29:45 Trying to become primary server
+2024/11/25 14:29:45 Successfully pinged primary server. 
+2024/11/25 14:29:48 Trying to become primary server
+2024/11/25 14:29:48 Successfully pinged primary server. 
+2024/11/25 14:29:51 Trying to become primary server
+2024/11/25 14:29:51 Successfully pinged primary server. 
+2024/11/25 14:29:54 Trying to become primary server
+2024/11/25 14:29:54 Successfully pinged primary server. 
+2024/11/25 14:29:57 Trying to become primary server
+2024/11/25 14:29:57 Successfully pinged primary server. 
+2024/11/25 14:30:00 Trying to become primary server
+2024/11/25 14:30:00 Successfully pinged primary server. 
+2024/11/25 14:30:03 Trying to become primary server
+2024/11/25 14:30:03 Successfully pinged primary server. 
+2024/11/25 14:30:04 Server recieved result request.
 Sent result reply with outcome NOTSTARTED, winner Id -1 adn winneramount -1
-2024/11/25 14:21:56 Trying to become primary server
-2024/11/25 14:21:56 Successfully pinged primary server. 
-2024/11/25 14:21:59 Trying to become primary server
-2024/11/25 14:21:59 Successfully pinged primary server. 
-2024/11/25 14:22:02 Trying to become primary server
-2024/11/25 14:22:02 Successfully pinged primary server. 
-2024/11/25 14:22:05 Trying to become primary server
-2024/11/25 14:22:05 Successfully pinged primary server. 
-2024/11/25 14:22:08 Trying to become primary server
-2024/11/25 14:22:08 Successfully pinged primary server. 
-2024/11/25 14:22:11 Trying to become primary server
-2024/11/25 14:22:11 Successfully pinged primary server. 
-2024/11/25 14:22:14 Trying to become primary server
-2024/11/25 14:22:14 Successfully pinged primary server. 
-2024/11/25 14:22:17 Trying to become primary server
-2024/11/25 14:22:17 Successfully pinged primary server. 
-2024/11/25 14:22:20 Trying to become primary server
-2024/11/25 14:22:20 Successfully pinged primary server. 
-2024/11/25 14:22:23 Trying to become primary server
-2024/11/25 14:22:23 Successfully pinged primary server. 
-2024/11/25 14:22:26 Trying to become primary server
-2024/11/25 14:22:26 Successfully pinged primary server. 
-2024/11/25 14:22:29 Trying to become primary server
-2024/11/25 14:22:29 Successfully pinged primary server. 
-2024/11/25 14:22:32 Trying to become primary server
-2024/11/25 14:22:32 Successfully pinged primary server. 
-2024/11/25 14:22:35 Trying to become primary server
-2024/11/25 14:22:35 Successfully pinged primary server. 
-2024/11/25 14:22:38 Trying to become primary server
-2024/11/25 14:22:38 Successfully pinged primary server. 
-2024/11/25 14:22:41 Trying to become primary server
-2024/11/25 14:22:41 Successfully pinged primary server. 
-2024/11/25 14:22:44 Trying to become primary server
-2024/11/25 14:22:44 Successfully pinged primary server. 
-2024/11/25 14:22:47 Trying to become primary server
-2024/11/25 14:22:47 Successfully pinged primary server. 
-2024/11/25 14:22:50 Trying to become primary server
-2024/11/25 14:22:50 Successfully pinged primary server. 
-2024/11/25 14:22:53 Trying to become primary server
-2024/11/25 14:22:53 Successfully pinged primary server. 
-2024/11/25 14:22:56 Trying to become primary server
-2024/11/25 14:22:56 Successfully pinged primary server. 
-2024/11/25 14:22:59 Trying to become primary server
-2024/11/25 14:22:59 Successfully pinged primary server. 
-2024/11/25 14:23:02 Trying to become primary server
-2024/11/25 14:23:02 Successfully pinged primary server. 
-2024/11/25 14:23:05 Trying to become primary server
-2024/11/25 14:23:05 Successfully pinged primary server. 
-2024/11/25 14:23:08 Trying to become primary server
-2024/11/25 14:23:08 Successfully pinged primary server. 
-2024/11/25 14:23:11 Trying to become primary server
-2024/11/25 14:23:11 Successfully pinged primary server. 
-2024/11/25 14:23:14 Trying to become primary server
-2024/11/25 14:23:14 Successfully pinged primary server. 
-2024/11/25 14:23:17 Trying to become primary server
-2024/11/25 14:23:17 Successfully pinged primary server. 
-2024/11/25 14:23:20 Trying to become primary server
-2024/11/25 14:23:20 Successfully pinged primary server. 
-2024/11/25 14:23:23 Trying to become primary server
-2024/11/25 14:23:23 Successfully pinged primary server. 
-2024/11/25 14:23:26 Trying to become primary server
-2024/11/25 14:23:26 Successfully pinged primary server. 
-2024/11/25 14:23:28 Received a Ping! 
-2024/11/25 14:23:29 Trying to become primary server
-2024/11/25 14:23:29 Primary server is down
+2024/11/25 14:30:06 Trying to become primary server
+2024/11/25 14:30:06 Successfully pinged primary server. 
+2024/11/25 14:30:09 Trying to become primary server
+2024/11/25 14:30:09 Successfully pinged primary server. 
+2024/11/25 14:30:10 Server recieved result request.
+Sent result reply with outcome NOTSTARTED, winner Id -1 adn winneramount -1
+2024/11/25 14:30:12 Trying to become primary server
+2024/11/25 14:30:12 Successfully pinged primary server. 
+2024/11/25 14:30:15 Server recieved result request.
+Sent result reply with outcome NOTSTARTED, winner Id -1 adn winneramount -1
+2024/11/25 14:30:15 Trying to become primary server
+2024/11/25 14:30:15 Successfully pinged primary server. 
+2024/11/25 14:30:18 Trying to become primary server
+2024/11/25 14:30:18 Successfully pinged primary server. 
+2024/11/25 14:30:21 Trying to become primary server
+2024/11/25 14:30:21 Successfully pinged primary server. 
+2024/11/25 14:30:24 Trying to become primary server
+2024/11/25 14:30:24 Successfully pinged primary server. 
+2024/11/25 14:30:28 Trying to become primary server
+2024/11/25 14:30:28 Successfully pinged primary server. 
+2024/11/25 14:30:31 Trying to become primary server
+2024/11/25 14:30:31 Successfully pinged primary server. 
+2024/11/25 14:30:34 Trying to become primary server
+2024/11/25 14:30:34 Successfully pinged primary server. 
+2024/11/25 14:30:37 Trying to become primary server
+2024/11/25 14:30:37 Successfully pinged primary server. 
+2024/11/25 14:30:40 Trying to become primary server
+2024/11/25 14:30:40 Successfully pinged primary server. 
+2024/11/25 14:30:42 Server recieved result request.
+Sent result reply with outcome NOTSTARTED, winner Id -1 adn winneramount -1
+2024/11/25 14:30:43 Trying to become primary server
+2024/11/25 14:30:43 Successfully pinged primary server. 
+2024/11/25 14:30:46 Trying to become primary server
+2024/11/25 14:30:46 Successfully pinged primary server. 
+2024/11/25 14:30:49 Trying to become primary server
+2024/11/25 14:30:49 Successfully pinged primary server. 
+2024/11/25 14:30:52 Trying to become primary server
+2024/11/25 14:30:52 Successfully pinged primary server. 
+2024/11/25 14:30:55 Trying to become primary server
+2024/11/25 14:30:55 Successfully pinged primary server. 
+2024/11/25 14:30:58 Trying to become primary server
+2024/11/25 14:30:58 Successfully pinged primary server. 
+2024/11/25 14:31:00 Server recieved result request.
+Sent result reply with outcome NOTSTARTED, winner Id -1 adn winneramount -1
+2024/11/25 14:31:01 Trying to become primary server
+2024/11/25 14:31:01 Successfully pinged primary server. 
+2024/11/25 14:31:04 Trying to become primary server
+2024/11/25 14:31:04 Successfully pinged primary server. 
+2024/11/25 14:31:07 Trying to become primary server
+2024/11/25 14:31:07 Successfully pinged primary server. 
+2024/11/25 14:31:10 Trying to become primary server
+2024/11/25 14:31:10 Successfully pinged primary server. 
+2024/11/25 14:31:13 Trying to become primary server
+2024/11/25 14:31:13 Successfully pinged primary server. 
+2024/11/25 14:31:16 Trying to become primary server
+2024/11/25 14:31:16 Successfully pinged primary server. 
+2024/11/25 14:31:19 Trying to become primary server
+2024/11/25 14:31:19 Successfully pinged primary server. 
+2024/11/25 14:31:22 Trying to become primary server
+2024/11/25 14:31:22 Successfully pinged primary server. 
+2024/11/25 14:31:25 Trying to become primary server
+2024/11/25 14:31:25 Successfully pinged primary server. 
+2024/11/25 14:31:28 Trying to become primary server
+2024/11/25 14:31:28 Successfully pinged primary server. 
+2024/11/25 14:31:31 Trying to become primary server
+2024/11/25 14:31:31 Successfully pinged primary server. 
+2024/11/25 14:31:34 Trying to become primary server
+2024/11/25 14:31:34 Successfully pinged primary server. 
+2024/11/25 14:31:37 Trying to become primary server
+2024/11/25 14:31:37 Primary server is down
+2024/11/25 14:31:37 New Primary lead is &d%!(EXTRA int32=6001)
+2024/11/25 14:31:37 Trying to become primary server

@@ -150,7 +150,7 @@ func (p *peer) BidBackup(ctx context.Context, in *proto.BidRequest) (*proto.BidR
 
 func (p *peer) StartAuction() {
 	log.Printf("An auction has started\n")
-	time.Sleep(1000 * time.Microsecond)
+	time.Sleep(50 * time.Second)
 	p.wg.Wait()
 	p.auction.state = proto.ResultResponse_FINISHED
 	log.Printf("Auction has concluded!\n")
