@@ -49,7 +49,7 @@ func (p *peer) elect() {
 		}
 	}
 
-	log.Printf("New Primary lead is d", lowestID)
+	log.Printf("New Primary lead is &d", lowestID)
 	if p.primaryServerPort == p.id {
 		p.PrimaryServer = true
 	}
@@ -106,59 +106,46 @@ func (p *peer) ResultBackup(ctx context.Context, in *proto.ResultRequest) (*prot
 }
 
 func (p *peer) BidBackup(ctx context.Context, in *proto.BidRequest) (*proto.BidResponse, error) {
-
 	p.incrementLamport(in.Lamport)
 
 	log.Printf("Server has received a bid from client %d with amount %d at lamport time %d\n", in.BidderId, in.Amount, p.Lamport)
 
-	//var response *proto.BidResponse
+	var response *proto.BidResponse
 
-	//p.wg.Add(1)
-	//defer p.wg.Done()
+	p.wg.Add(1)
+	defer p.wg.Done()
 
 	if in.Amount <= 0 {
-		return &proto.BidResponse{
+		response = &proto.BidResponse{
 			Lamport: p.Lamport,
 			Result:  proto.BidResponse_EXCEPTION,
-		}, nil
-	} 
-	if p.auction.state == proto.ResultResponse_NOTSTARTED {
+		}
+	} else if p.auction.state == proto.ResultResponse_NOTSTARTED || p.auction.state == proto.ResultResponse_FINISHED {
 		p.auction.state = proto.ResultResponse_ONGOING
 		p.auction.winner = in.BidderId
 		p.auction.winningBid = in.Amount
 		go p.StartAuction()
-		return &proto.BidResponse{
+		response = &proto.BidResponse{
 			Lamport: p.Lamport,
 			Result:  proto.BidResponse_SUCCESS,
-		}, nil
-	} 
-	if p.auction.state == proto.ResultResponse_FINISHED {
-		return &proto.BidResponse{
-			Lamport: p.Lamport,
-			Result:  proto.BidResponse_SUCCESS,
-		}, nil
-	}
-	
-	if in.Amount > p.auction.winningBid {
-		if in.Amount > p.auction.winningBid {
-			log.Printf("New bid %d from client %d is the highest bid.\n", in.Amount, in.BidderId)
-			p.auction.winner = in.BidderId
-			p.auction.winningBid = in.Amount
-		} else {
-			log.Printf("Bid from %d from client %d is lower than the current winning bid %d\n", in.Amount, in.BidderId, p.auction.winningBid)
 		}
-
-		return &proto.BidResponse{
+	} else if in.Amount < p.auction.winningBid {
+		log.Printf("Bid %d from client %d is lower than the current highest bid %d\n", in.Amount, in.BidderId, p.auction.winningBid)
+		response = &proto.BidResponse{
+			Lamport: p.Lamport,
+			Result:  proto.BidResponse_FAIL,
+		}
+	} else {
+		log.Printf("New bid %d from client %d is the highest bid.\n", in.Amount, in.BidderId)
+		p.auction.winner = in.BidderId
+		p.auction.winningBid = in.Amount
+		response = &proto.BidResponse{
 			Lamport: p.Lamport,
 			Result:  proto.BidResponse_SUCCESS,
-		}, nil
+		}
 	}
 
-	log.Printf("Bid %d from client %d is lower than the current highest bid %d\n", in.Amount, in.BidderId, p.auction.winningBid)
-	return &proto.BidResponse{
-		Lamport: p.Lamport,
-		Result:  proto.BidResponse_FAIL,
-	}, nil
+	return response, nil
 }
 
 func (p *peer) StartAuction() {
@@ -205,6 +192,7 @@ func main() {
 		wg:  sync.WaitGroup{},
 		ctx: ctx,
 	}
+	p.auction.winningBid = -1;
 
 	if ownPort == p.primaryServerPort {
 		p.PrimaryServer = true

@@ -1,0 +1,13 @@
+2024/11/25 14:19:25 Connected to server %d5000
+2024/11/25 14:19:51 Bidder 5002 bids 3, at timestamp 1
+2024/11/25 14:19:51 Bidder 5002 received SUCCESS at timestamp 7
+2024/11/25 14:19:55 Bidder 5002 bids 2, at timestamp 8
+2024/11/25 14:19:55 Bidder 5002 received SUCCESS at timestamp 10
+2024/11/25 14:20:17 Bidder 5002 bids 1000, at timestamp 11
+2024/11/25 14:20:17 Bidder 5002 received SUCCESS at timestamp 13
+2024/11/25 14:20:21 Bidder 5002 bids 200000, at timestamp 14
+2024/11/25 14:20:21 Bidder 5002 received SUCCESS at timestamp 16
+2024/11/25 14:21:53 The auction is currently FINISHED and the highest bid is 200000 by bidder 5002
+2024/11/25 14:23:13 Bidder 5002 bids 20, at timestamp 17
+2024/11/25 14:23:13 Bidder 5002 received SUCCESS at timestamp 19
+2024/11/25 14:23:16 strconv.Atoi: parsing "2+++": invalid syntax
