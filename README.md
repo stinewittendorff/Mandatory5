@@ -8,6 +8,6 @@ First in this order you do these commands all in different terminals
 - "go run bidder.go 1"
 - "go run bidder.go 2"
 
-  After you've done this you cna now bid in the bidder.go terminals by writing bid and a chosen number
+After you've done this you can now bid in the bidder.go terminals by writing bid and a chosen number, or checking the status of the auction by writing result
 
-  Enjoy <3
+Enjoy <3
